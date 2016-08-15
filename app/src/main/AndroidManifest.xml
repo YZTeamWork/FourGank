@@ -15,6 +15,12 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".yonionyy.activity.YYActivity">
+        </activity>
+        <activity android:name=".yonionyy.activity.BaseActivity">
+        </activity>
+        <activity android:name=".yonionyy.activity.YMainActivity">
+        </activity>
     </application>
 
 </manifest>
