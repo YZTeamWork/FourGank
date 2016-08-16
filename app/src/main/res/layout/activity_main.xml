@@ -8,22 +8,10 @@
     android:layout_height="match_parent"
     tools:context="com.yibh.fourgank.MainActivity">
 
-<<<<<<< HEAD
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal">
-=======
-    <TextView
-        android:id="@+id/test_tx"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="@+id/activity_main"
-        app:layout_constraintLeft_toLeftOf="@+id/activity_main"
-        app:layout_constraintRight_toRightOf="@+id/activity_main"
-        app:layout_constraintTop_toTopOf="@+id/activity_main"/>
->>>>>>> yibh_branch
 
         <Button
             android:id="@+id/bt_yibh"
