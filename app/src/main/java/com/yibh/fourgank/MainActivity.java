@@ -24,7 +24,5 @@ public class MainActivity extends AppCompatActivity {
 
     private void initData() {
         mButton_yibh.setOnClickListener(view ->YMainActivity.startYMainActivity(this) );
-        mTextView.setOnClickListener(view -> {});
-        mTextView.setText("我是测试");
     }
 }
