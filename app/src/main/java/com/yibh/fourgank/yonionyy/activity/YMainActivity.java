@@ -29,7 +29,7 @@ public class YMainActivity extends BaseActivity {
 
     @OnClick(R.id.bt_lambda)
     protected void startLamAct(){
-        YYActivity.startYYActivity(this);
+        YLambdaActivity.startYYActivity(this);
     }
 
 }
