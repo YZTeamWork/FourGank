@@ -7,7 +7,7 @@ android {
     buildToolsVersion "24.0.1"
     defaultConfig {
         applicationId "com.yibh.fourgank"
-        minSdkVersion 14
+        minSdkVersion 24
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
@@ -26,6 +26,19 @@ android {
         sourceCompatibility 1.8
         targetCompatibility 1.8
     }
+
+    task makeJar(type: Copy) {
+        delete 'build/libs/mysdk.jar'
+        from('build/intermediates/bundles/release/')
+        into('build/libs/')
+        include('classes.jar')
+        rename('classes.jar', 'mysdk.jar')
+    }
+
+    makeJar.dependsOn(build)
+//在终端执行生成JAR包
+// gradlew makeJar
+
 }
 
 dependencies {
@@ -33,10 +46,13 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    def supportLibVersion = '24.1.1'
     //    testCompile 'junit:junit:4.12'
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha4'
-    compile 'com.android.support:appcompat-v7:24.1.1'
-    compile 'com.jakewharton:butterknife:8.2.1'
-    apt 'com.jakewharton:butterknife-compiler:8.2.1'
-    compile 'com.android.support:design:24.1.1'
+//    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha4'
+    compile "com.android.support:appcompat-v7:${supportLibVersion}"
+    compile "com.android.support:design:${supportLibVersion}"
+
+    def butterknifeVersion='8.2.1'
+    compile "com.jakewharton:butterknife:${butterknifeVersion}"
+    apt "com.jakewharton:butterknife-compiler:${butterknifeVersion}"
 }
