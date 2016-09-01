@@ -25,33 +25,40 @@
     <!--android:textColorHint="@android:color/holo_red_light"/>-->
 
     <android.support.design.widget.TextInputLayout
-        android:layout_width="wrap_content"
-
+        android:id="@+id/name_in_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp">
 
         <EditText
             android:id="@+id/name_ed"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="请输入用户名"
-
-            android:textColorHint="@android:color/holo_red_light"/>
+            android:hint="请输入用户名(yibh)"
+            android:inputType="text"
+            android:textColorHint="@android:color/holo_red_light"
+            android:textSize="18sp"/>
 
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
-        android:layout_width="wrap_content"
+        android:id="@+id/pass_in_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:layout_marginTop="10dp">
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp">
 
         <EditText
             android:id="@+id/password_ed"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="请输入密码"
-            android:textColorHint="@android:color/holo_red_light"/>
+            android:hint="请输入密码(你猜)"
+            android:inputType="textVisiblePassword"
+            android:textColorHint="@android:color/holo_red_light"
+            android:textSize="18sp"/>
 
     </android.support.design.widget.TextInputLayout>
 

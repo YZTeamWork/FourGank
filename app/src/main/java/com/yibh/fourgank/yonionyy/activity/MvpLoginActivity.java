@@ -35,6 +35,12 @@ public class MvpLoginActivity extends AppCompatActivity implements ILoginView {
     @BindView(R.id.login_pro)
     ProgressBar mProgressBar;
 
+//    @BindView(R.id.name_in_layout)
+//    TextInputLayout mNameInputLayout;
+//
+//    @BindView(R.id.pass_in_layout)
+//    TextInputLayout mPassInputLayout;
+
     private ILoginPresenterImpl mILoginPresenter;
 
 
@@ -48,6 +54,10 @@ public class MvpLoginActivity extends AppCompatActivity implements ILoginView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mvp_login);
         ButterKnife.bind(this);
+
+//        mNameEditText = mNameInputLayout.getEditText();
+//        mPasswEditText = mPassInputLayout.getEditText();
+
 
         initData();
     }
