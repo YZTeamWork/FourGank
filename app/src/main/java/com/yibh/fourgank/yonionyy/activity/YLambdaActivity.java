@@ -2,13 +2,14 @@ package com.yibh.fourgank.yonionyy.activity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 import com.yibh.fourgank.R;
 import com.yibh.fourgank.utils.ToastSnackUtil;
 
-import java.util.Comparator;
 import java.util.concurrent.Callable;
 
 import butterknife.BindView;
@@ -114,17 +115,17 @@ public class YLambdaActivity extends BaseActivity {
          * Person::new       //构造器引用
          */
 
-        //静态方法引用
-        Comparator<Integer> integerComparator=new Comparator<Integer>() {
-            @Override
-            public int compare(Integer t1, Integer t2) {
-                return Integer.compare(t1,t2);
-            }
-        } ;
-        //lambda一般写法
-        Comparator<Integer> yComparator=(a, b)->Integer.compare(a,b);
-        //lambda 方法引用写法
-        Comparator<Integer> yComparator1 = Integer::compare;
+//        //静态方法引用
+//        Comparator<Integer> integerComparator=new Comparator<Integer>() {
+//            @Override
+//            public int compare(Integer t1, Integer t2) {
+//                return Integer.compare(t1,t2);
+//            }
+//        } ;
+//        //lambda一般写法
+//        Comparator<Integer> yComparator=(a, b)->Integer.compare(a,b);
+//        //lambda 方法引用写法
+//        Comparator<Integer> yComparator1 = Integer::compare;
 
 
         //实例方法引用
@@ -136,6 +137,8 @@ public class YLambdaActivity extends BaseActivity {
 //        mTestBeenList.forEach(TestBean::toString);
 
         /*------------------------*/
+
+        new Handler().postDelayed(() -> Log.w("测试", "测试msg"), 3000);
 
     }
 

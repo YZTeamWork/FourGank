@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_mvp_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <!--<android.support.design.widget.TextInputEditText-->
+    <!--android:id="@+id/name_ed"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:hint="请输入用户名"-->
+    <!--android:textColorHint="@android:color/holo_red_light"/>-->
+
+    <!--<android.support.design.widget.TextInputEditText-->
+    <!--android:id="@+id/password_ed"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/name_ed"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:hint="请输入密码"-->
+    <!--android:textColorHint="@android:color/holo_red_light"/>-->
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/name_ed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请输入用户名"
+
+            android:textColorHint="@android:color/holo_red_light"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/password_ed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请输入密码"
+            android:textColorHint="@android:color/holo_red_light"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/login_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="登录"/>
+
+    <Button
+        android:id="@+id/clear_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="清空"/>
+
+
+    <ProgressBar
+        android:id="@+id/login_pro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:overScrollMode="always"
+        android:visibility="gone"/>
+
+
+</LinearLayout>

@@ -7,7 +7,7 @@ android {
     buildToolsVersion "24.0.1"
     defaultConfig {
         applicationId "com.yibh.fourgank"
-        minSdkVersion 24
+        minSdkVersion 19
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
@@ -48,11 +48,11 @@ dependencies {
     })
     def supportLibVersion = '24.1.1'
     //    testCompile 'junit:junit:4.12'
-//    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha4'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha4'
     compile "com.android.support:appcompat-v7:${supportLibVersion}"
     compile "com.android.support:design:${supportLibVersion}"
 
-    def butterknifeVersion='8.2.1'
+    def butterknifeVersion = '8.2.1'
     compile "com.jakewharton:butterknife:${butterknifeVersion}"
     apt "com.jakewharton:butterknife-compiler:${butterknifeVersion}"
 }

@@ -25,11 +25,17 @@ public class YMainActivity extends BaseActivity {
     }
 
     @Override
-    protected void initData() {}
+    protected void initData() {
+    }
 
     @OnClick(R.id.bt_lambda)
-    protected void startLamAct(){
+    protected void startLamAct() {
         YLambdaActivity.startYYActivity(this);
+    }
+
+    @OnClick(R.id.bt_mvp)
+    protected void startMvpAct() {
+        startActivity(MvpLoginActivity.newIntent(this));
     }
 
 }
