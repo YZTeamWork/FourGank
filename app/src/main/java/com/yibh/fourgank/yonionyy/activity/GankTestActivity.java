@@ -54,6 +54,7 @@ public class GankTestActivity extends BaseActivity implements GankContract.View 
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
+                //上滑,滑不动的时候加载更多
                 if (!ViewCompat.canScrollVertically(recyclerView, 1)) {
                     mGankPresenter.getMeiz(10, ++currPage);
                 }
