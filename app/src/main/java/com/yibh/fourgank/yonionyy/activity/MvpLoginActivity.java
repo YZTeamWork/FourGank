@@ -11,8 +11,8 @@ import android.widget.ProgressBar;
 
 import com.yibh.fourgank.R;
 import com.yibh.fourgank.utils.ToastSnackUtil;
-import com.yibh.fourgank.yonionyy.mvptest.iView.ILoginView;
-import com.yibh.fourgank.yonionyy.mvptest.implPresenter.ILoginPresenterImpl;
+import com.yibh.fourgank.yonionyy.mvp_logintest.iView.ILoginView;
+import com.yibh.fourgank.yonionyy.mvp_logintest.implPresenter.ILoginPresenterImpl;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

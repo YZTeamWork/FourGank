@@ -1,10 +1,10 @@
-package com.yibh.fourgank.yonionyy.mvptest.implPresenter;
+package com.yibh.fourgank.yonionyy.mvp_logintest.implPresenter;
 
 import android.os.Handler;
 
-import com.yibh.fourgank.yonionyy.mvptest.iView.ILoginView;
-import com.yibh.fourgank.yonionyy.mvptest.model.User;
-import com.yibh.fourgank.yonionyy.mvptest.presenter.ILoginPresenter;
+import com.yibh.fourgank.yonionyy.mvp_logintest.iView.ILoginView;
+import com.yibh.fourgank.yonionyy.mvp_logintest.model.User;
+import com.yibh.fourgank.yonionyy.mvp_logintest.presenter.ILoginPresenter;
 
 /**
  * Created by yibh on 2016/9/1  17:40.

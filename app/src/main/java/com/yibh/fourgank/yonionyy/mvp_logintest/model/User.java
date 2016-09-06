@@ -1,4 +1,4 @@
-package com.yibh.fourgank.yonionyy.mvptest.model;
+package com.yibh.fourgank.yonionyy.mvp_logintest.model;
 
 /**
  * Created by yibh on 2016/9/1  17:51.

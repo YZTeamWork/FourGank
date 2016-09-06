@@ -38,4 +38,8 @@ public class YMainActivity extends BaseActivity {
         startActivity(MvpLoginActivity.newIntent(this));
     }
 
+    @OnClick(R.id.bt_mvp_gank)
+    protected void startGankAct() {
+        GankTestActivity.startGankTActivity(this);
+    }
 }

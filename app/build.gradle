@@ -48,11 +48,30 @@ dependencies {
     })
     def supportLibVersion = '24.1.1'
     //    testCompile 'junit:junit:4.12'
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha4'
     compile "com.android.support:appcompat-v7:${supportLibVersion}"
     compile "com.android.support:design:${supportLibVersion}"
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha4'
 
     def butterknifeVersion = '8.2.1'
     compile "com.jakewharton:butterknife:${butterknifeVersion}"
     apt "com.jakewharton:butterknife-compiler:${butterknifeVersion}"
+
+//    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+
+    /*rotrofit*/
+//    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:retrofit:+'
+    compile 'com.squareup.retrofit2:converter-gson:+'
+    compile 'com.squareup.retrofit2:adapter-rxjava:+'
+
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    /*rx-android-java*/
+    compile 'io.reactivex:rxjava:+'
+//    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxandroid:+'
+// Because RxAndroid releases are few and far between, it is recommended you also
+// explicitly depend on RxJava's latest version for bug fixes and new features.
+//    compile 'io.reactivex:rxjava:1.1.6'
+
 }

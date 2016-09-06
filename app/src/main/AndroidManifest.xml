@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.yibh.fourgank">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:name=".FourApp"
         android:allowBackup="true"
@@ -23,6 +26,8 @@
         <activity android:name=".yonionyy.activity.YMainActivity">
         </activity>
         <activity android:name=".yonionyy.activity.MvpLoginActivity">
+        </activity>
+        <activity android:name=".yonionyy.activity.GankTestActivity">
         </activity>
     </application>
 

@@ -9,8 +9,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/bt_lambda"
@@ -22,8 +22,13 @@
             android:id="@+id/bt_mvp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="mvp练习"/>
+            android:text="mvp_登录练习"/>
 
+        <Button
+            android:id="@+id/bt_mvp_gank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mvp_网络请求练习"/>
 
     </LinearLayout>
 
