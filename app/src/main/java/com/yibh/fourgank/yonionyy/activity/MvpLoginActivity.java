@@ -101,5 +101,4 @@ public class MvpLoginActivity extends AppCompatActivity implements ILoginView {
         mILoginPresenter.onClear();
     }
 
-
 }

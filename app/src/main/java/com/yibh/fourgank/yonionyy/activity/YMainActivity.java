@@ -42,4 +42,9 @@ public class YMainActivity extends BaseActivity {
     protected void startGankAct() {
         GankTestActivity.startGankTActivity(this);
     }
+
+    @OnClick(R.id.bt_retrofit)
+    protected void startRetroAct() {
+        RetrofitTestActivity.startNewActivity(this);
+    }
 }

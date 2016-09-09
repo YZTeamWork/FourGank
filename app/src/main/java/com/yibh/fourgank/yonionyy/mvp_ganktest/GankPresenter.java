@@ -2,6 +2,8 @@ package com.yibh.fourgank.yonionyy.mvp_ganktest;
 
 import android.util.Log;
 
+import com.yibh.fourgank.FourApp;
+import com.yibh.fourgank.utils.NetUtil;
 import com.yibh.fourgank.yonionyy.activity.GankTestActivity;
 
 import java.util.List;
@@ -24,6 +26,10 @@ public class GankPresenter implements GankContract.Presenter {
     @Override
     public void getMeiz(int currPage, int avgCount) {
         mView.startLoad();
+        if (!NetUtil.isConnected(FourApp.mContext)) {
+            mView.onError("请检查网络!");
+            return;
+        }
         GankRetrofit.getGankService().getFuLi(currPage, avgCount)
                 .map(fuliBean -> fuliBean.mMeiziList)
                 .subscribeOn(Schedulers.io())

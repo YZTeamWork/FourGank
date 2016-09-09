@@ -27,17 +27,6 @@ android {
         targetCompatibility 1.8
     }
 
-    task makeJar(type: Copy) {
-        delete 'build/libs/mysdk.jar'
-        from('build/intermediates/bundles/release/')
-        into('build/libs/')
-        include('classes.jar')
-        rename('classes.jar', 'mysdk.jar')
-    }
-
-    makeJar.dependsOn(build)
-//在终端执行生成JAR包
-// gradlew makeJar
 
 }
 
@@ -50,7 +39,7 @@ dependencies {
     //    testCompile 'junit:junit:4.12'
     compile "com.android.support:appcompat-v7:${supportLibVersion}"
     compile "com.android.support:design:${supportLibVersion}"
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha4'
+//    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha4'
 
     def butterknifeVersion = '8.2.1'
     compile "com.jakewharton:butterknife:${butterknifeVersion}"
@@ -74,4 +63,5 @@ dependencies {
 // explicitly depend on RxJava's latest version for bug fixes and new features.
 //    compile 'io.reactivex:rxjava:1.1.6'
 
+    compile 'com.yolanda.nohttp:nohttp:1.0.6'
 }

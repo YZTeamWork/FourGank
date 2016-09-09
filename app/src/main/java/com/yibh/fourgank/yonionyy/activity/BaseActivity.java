@@ -19,9 +19,11 @@ public abstract class BaseActivity extends AppCompatActivity {
         initData();
     }
 
-    public int getContentViewId() {
-        return -1;
-    }
+//    public int getContentViewId() {
+//        return -1;
+//    }
+
+    public abstract int getContentViewId();
 
     protected abstract void initData();
 
