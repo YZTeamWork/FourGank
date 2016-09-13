@@ -19,12 +19,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".yonionyy.activity.YLambdaActivity"></activity>
-        <activity android:name=".yonionyy.activity.BaseActivity"></activity>
-        <activity android:name=".yonionyy.activity.YMainActivity"></activity>
-        <activity android:name=".yonionyy.activity.MvpLoginActivity"></activity>
-        <activity android:name=".yonionyy.activity.GankTestActivity"></activity>
-        <activity android:name=".yonionyy.activity.RetrofitTestActivity"></activity>
+        <activity android:name=".yonionyy.activity.YLambdaActivity" />
+        <activity android:name=".yonionyy.activity.BaseActivity" />
+        <activity android:name=".yonionyy.activity.YMainActivity" />
+        <activity android:name=".yonionyy.activity.MvpLoginActivity" />
+        <activity android:name=".yonionyy.activity.GankTestActivity" />
+        <activity android:name=".yonionyy.activity.RetrofitTestActivity" />
+        <activity android:name=".yonionyy.activity.CustomViewActivity"></activity>
     </application>
 
 </manifest>

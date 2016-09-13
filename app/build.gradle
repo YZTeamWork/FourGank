@@ -64,4 +64,6 @@ dependencies {
 //    compile 'io.reactivex:rxjava:1.1.6'
 
     compile 'com.yolanda.nohttp:nohttp:1.0.6'
+
+    compile 'org.greenrobot:greendao:3.1.1'
 }

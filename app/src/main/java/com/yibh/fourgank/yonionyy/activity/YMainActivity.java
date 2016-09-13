@@ -47,4 +47,9 @@ public class YMainActivity extends BaseActivity {
     protected void startRetroAct() {
         RetrofitTestActivity.startNewActivity(this);
     }
+
+    @OnClick(R.id.customview)
+    protected void startCustomAct() {
+        startActivity(CustomViewActivity.newIntent(this));
+    }
 }
