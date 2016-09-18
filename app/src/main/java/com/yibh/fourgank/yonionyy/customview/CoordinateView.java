@@ -82,5 +82,16 @@ public class CoordinateView extends View {
                 0f, mHeight / 2 * 0.7f, -mWidth / 2 * 0.7f * 0.05f, mHeight / 2 * 0.7f * 0.8f
         }, mPaint);
 
+        /*--------下面画了两个圆-------------*/
+        canvas.save();  //保存画布的状态
+        mPaint.setColor(Color.RED);
+        float v = Math.min(mWidth * 0.7f, mHeight * 0.7f) / 2f * 0.5f;
+        canvas.rotate(90);  //画布旋转90度
+        canvas.drawCircle(v, 0f, v * 0.5f, mPaint);  //画个圆
+
+        canvas.restore();   //恢复画布保存钱的状态
+        mPaint.setColor(Color.GREEN);
+        canvas.drawCircle(v, 0f, v * 0.5f, mPaint);
+
     }
 }

@@ -14,6 +14,10 @@
             android:layout_width="match_parent"
             android:layout_height="100dp" />
 
+        <com.yibh.fourgank.yonionyy.customview.DoubanLoadingView
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
     </LinearLayout>
 
 </ScrollView>
