@@ -22,6 +22,10 @@ public class DoubanLoadingView extends View {
     private float mHeight;
     private ValueAnimator mValueAnimator;
     private float mAniValue;
+    private Paint mPaint;
+    private float mR;
+    private float mPoint;
+    private RectF mRectF;
 
     public DoubanLoadingView(Context context) {
         this(context, null);
@@ -33,6 +37,16 @@ public class DoubanLoadingView extends View {
 
     public DoubanLoadingView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        initPaint();
+    }
+
+    private void initPaint() {
+        mPaint = new Paint();
+        mPaint.setColor(Color.GREEN);
+        mPaint.setStrokeWidth(10);
+        mPaint.setAntiAlias(true);  //抗锯齿
+        mPaint.setStyle(Paint.Style.STROKE);    //描边
+        mPaint.setStrokeCap(Paint.Cap.ROUND);//圆角笔触
     }
 
 
@@ -47,6 +61,8 @@ public class DoubanLoadingView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         initView(canvas);
+//        rotateingArc(canvas);
+        onAnimation(canvas);
 
     }
 
@@ -56,19 +72,25 @@ public class DoubanLoadingView extends View {
      * @param canvas
      */
     private void initView(Canvas canvas) {
-        Paint mPaint = new Paint();
-        mPaint.setColor(Color.GREEN);
-        mPaint.setStrokeWidth(10);
-        mPaint.setAntiAlias(true);  //抗锯齿
-        mPaint.setStyle(Paint.Style.STROKE);    //描边
 
         canvas.translate(mWidth / 2, mHeight / 2);   //移动中心点
-        float r = Math.min(mWidth, mHeight) / 2 * 0.7f;
-        float point = r / (float) Math.sqrt(2);
-        canvas.drawPoints(new float[]{-point, -point, point, -point}, mPaint);    //两个点(眼睛)
-        RectF rectF = new RectF(-r, -r, r, r);
-        canvas.drawArc(rectF, 0, 180, false, mPaint);
+        mR = Math.min(mWidth, mHeight) / 2 * 0.7f;
+        mPoint = mR / (float) Math.sqrt(2); //计算眼睛点所在的位置
+//        canvas.drawPoints(new float[]{-point, -point, point, -point}, mPaint);    //两个点(眼睛)
+        mRectF = new RectF(-mR, -mR, mR, mR);
+//        canvas.drawArc(rectF, 0, 180, false, mPaint);
     }
+
+    /**
+     * author: yibh
+     * Date: 2016/9/19  15:39 .
+     * 旋转过程中270'的圆弧
+     */
+    private void rotateingArc(Canvas canvas) {
+        RectF rectF = new RectF(-mR, -mR, mR, mR);
+        canvas.drawArc(rectF, 0, 270, false, mPaint);
+    }
+
 
     /**
      * 执行动画操作
@@ -82,7 +104,7 @@ public class DoubanLoadingView extends View {
             }
             mValueAnimator.start();
         } else {
-            mValueAnimator = ValueAnimator.ofFloat(0, 720).setDuration(duration);
+            mValueAnimator = ValueAnimator.ofFloat(0, 855).setDuration(duration);
             mValueAnimator.setInterpolator(new DecelerateInterpolator());
             mValueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                 @Override
@@ -97,9 +119,16 @@ public class DoubanLoadingView extends View {
     }
 
     /**
+     * author: yibh
+     * Date: 2016/9/19  15:13 .
      * 具体执行过程
      */
-    private void onAnimation(){
+    private void onAnimation(Canvas canvas) {
+        float startAngle = 0;
+        float sweepAngle = 0;
+        canvas.drawArc(mRectF, startAngle, sweepAngle, false, mPaint);
+        canvas.drawPoints(new float[]{-mPoint, -mPoint, mPoint, -mPoint}, mPaint);
+
 
     }
 
